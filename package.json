@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://daniellalimbag.github.io/daniellalimbag.github.io/",
+  "homepage": "https://daniellalimbag.github.io/portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
