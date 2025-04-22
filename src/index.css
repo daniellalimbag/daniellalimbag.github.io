@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --blue: #6B729Fff;
+  --green: #A9CAB4ff;
+  --violet: #696C94ff;
+  --gold: #e0c055;
+  --slate: #B1B5C9ff;
+  --bg: #fff;
+  --text: #213547;
+}
+
+.dark {
+  --blue: #6B729Fff;
+  --green: #A9CAB4ff;
+  --violet: #696C94ff;
+  --gold: #e0c055;
+  --slate: #B1B5C9ff;
+  --bg: #242424;
+  --text: #fff;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.cursor-follower-gif {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 0; /* or -1 if needed */
+}
