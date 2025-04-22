@@ -6,7 +6,7 @@ import { SiKotlin, SiJupyter } from "react-icons/si";
 
 const Skills = () => (
   <section className="w-full min-h-[120px] py-8 mx-0 flex flex-col items-center justify-center py-16 px-0 w-full bg-[color:var(--bg)] border-t border-t-[color:var(--text)]">
-    <h2 className="text-3xl font-bold pb-4 text-center text-[color:var(--text)]">Skills</h2> 
+    <h2 className="section-title text-3xl md:text-3xl font-bold text-text drop-shadow-lg tracking-tight text-center w-fit">Skills</h2> 
     <div className="flex flex-row md:flex-nowrap flex-wrap gap-6 justify-center items-center w-full max-w-5xl mb-4 mt-8">
       {/* HTML5 */}
       <div className="flex flex-col items-center transition-transform duration-200 hover:scale-110 hover:-translate-y-1 hover:shadow-lg">

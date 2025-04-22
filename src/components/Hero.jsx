@@ -1,6 +1,7 @@
 import React from "react";
 import CursorFollower from "./CursorFollower";
 import ParticleBackground from "./ParticleBackground";
+import Typewriter from "./Typewriter";
 
 const Hero = () => (
   <section className="relative min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-br from-[color:var(--bg)] to-[color:var(--green)] dark:bg-gradient-to-br dark:from-[color:var(--bg)] dark:to-[color:var(--blue)] overflow-hidden py-12">
@@ -18,10 +19,18 @@ const Hero = () => (
         Hello, I'm <span className="font-extrabold text-[color:var(--violet)] dark:text-[color:var(--green)]">Daniella</span>
       </h1>
         <p className="text-lg md:text-l text-[color:var(--text)] dark:text-[color:var(--text)] font-normal mb-4">
-          I'm a tech enthusiast based in the <span className="font-semibold">Philippines</span> studying computer science at <span className="font-semibold">De La Salle University</span>.
+          I'm a tech enthusiast based in the <span className="font-semibold">Philippines</span> studying Computer Science at <span className="font-semibold">De La Salle University</span>.
         </p>
         <p className="text-lg md:text-l text-[color:var(--text)] dark:text-[color:var(--text)] font-normal max-w-xl">
-          I'm interested in <span className="font-semibold">software development</span>, <span className="font-semibold">design</span>, and building creative digital solutions.
+          I'm interested in {" "}
+          <Typewriter
+            words={[
+              "software development",
+              "ui/ux design",
+              "data science",
+              "building digital solutions"
+            ]}
+          />
         </p>
       </div>
     </div>

@@ -6,7 +6,7 @@ const About = () => (
     <div className="w-full md:flex-1 flex flex-col items-center md:items-start justify-center px-6 md:px-20 py-8">
       <h2 className="text-3xl font-bold py-4 md:py-6 text-center md:text-left text-[color:var(--text)] w-full">About Me</h2>
       <p className="text-center md:text-left text-[color:var(--text)] max-w-xl text-base md:text-lg w-full mb-4">
-        Hi! I'm Daniella, a passionate developer who loves building interactive web experiences. I enjoy working with modern web technologies, learning new tools, and collaborating on exciting projects. Outside of coding, you might find me exploring new tech trends or enjoying coffee with friends.
+        Hi! I'm Daniella, a passionate developer who loves learning new things and building digital solutions. I enjoy working with modern web technologies, learning new tools, and collaborating on exciting projects. Outside of coding, you might find me exploring indie games or watching YouTube tutorials and suddenly rethinking my entire tech stack.
       </p>
       <a
         href="/CV_LIMBAG_DANIELLA.pdf"
