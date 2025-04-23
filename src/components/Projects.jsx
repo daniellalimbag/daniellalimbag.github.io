@@ -82,13 +82,13 @@ function ProjectModal({ project, onClose }) {
 const Projects = () => {
   const [selected, setSelected] = useState(null);
   return (
-    <section className="w-full py-16 bg-[color:var(--bg)] flex flex-col items-center border-t border-t-[color:var(--text)]">
+    <section className="w-full py-16 bg-gradient-to-br from-[color:var(--bg)] to-[color:var(--green)] dark:bg-gradient-to-br dark:from-[color:var(--bg)] dark:to-[color:var(--blue)] flex flex-col items-center border-t border-t-[color:var(--text)]">
       <h2 className="section-title text-3xl md:text-3xl font-bold text-text drop-shadow-lg tracking-tight text-center mb-10">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl px-6">
         {projects.map((project, idx) => (
           <div
             key={project.name}
-            className={`relative flex flex-col justify-between items-start rounded-2xl shadow-xl cursor-pointer overflow-hidden group border border-gray-200 dark:border-gray-700 p-0`}
+            className={`relative z-10 flex flex-col justify-between items-start rounded-2xl shadow-xl cursor-pointer overflow-hidden group border border-gray-200 dark:border-gray-700 p-0`}
             style={project.gradientStyle}
             onClick={() => setSelected(project)}
           >
