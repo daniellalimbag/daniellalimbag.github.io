@@ -14,7 +14,7 @@ const projects = [
       { name: "Python", icon: <IoLogoPython className="w-6 h-6 text-yellow-500" /> },
       { name: "Selenium", icon: <SiSelenium className="w-6 h-6 text-green-500" /> }
     ],
-    gradient: "bg-[linear-gradient(to_top,_#0ba360_0%,_#3cba92_100%)] dark:from-[var(--violet)] dark:via-[var(--blue)] dark:to-[var(--green)]",
+    gradientStyle: { background: 'linear-gradient(to top, #0ba360 0%, #3cba92 100%)' },
     github: "https://github.com/daniellalimbag/snipey",
     demo: "#"
   },
@@ -27,7 +27,7 @@ const projects = [
       { name: "React", icon: <FaReact className="w-6 h-6 text-sky-400" /> },
       { name: "Chakra UI", icon: <SiChakraui className="w-6 h-6 text-teal-400" /> }
     ],
-    gradient: "bg-[linear-gradient(to_top,_#09203f_0%,_#537895_100%)] dark:from-[var(--violet)] dark:via-[var(--blue)] dark:to-[var(--green)]",
+    gradientStyle: { background: 'linear-gradient(to top, #09203f 0%, #537895 100%)' },
     github: "https://github.com/daniellalimbag/calcademy",
     demo: "https://calcademy.vercel.app/"
   },
@@ -38,9 +38,11 @@ function ProjectModal({ project, onClose }) {
   if (!project) return null;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-      <div className={`bg-gradient-to-br ${project.gradient} p-6 rounded-xl shadow-2xl max-w-xl w-full relative animate-pop flex flex-col items-start transition-transform transition-opacity duration-300 ease-out transform scale-100 opacity-100`}
-        style={{animation: 'modalPopIn 0.3s cubic-bezier(0.4,0,0.2,1)'}}>
-        <button onClick={onClose} className="absolute top-4 right-4 text-3xl text-gray-200 hover:text-red-400 z-50 cursor-pointer" style={{zIndex: 100}}>&times;</button>
+      <div
+        className="p-6 rounded-xl shadow-2xl max-w-xl w-full relative animate-pop flex flex-col items-start transition-transform transition-opacity duration-300 ease-out transform scale-100 opacity-100"
+        style={{ ...project.gradientStyle, animation: 'modalPopIn 0.3s cubic-bezier(0.4,0,0.2,1)' }}
+      >
+        <button onClick={onClose} className="absolute top-4 right-4 text-3xl text-gray-200 hover:text-red-400 z-50 cursor-pointer" style={{ zIndex: 100 }}>&times;</button>
         <div className="w-full text-left mb-2">
           <h3 className="text-2xl font-bold mb-2 text-white drop-shadow">{project.name}</h3>
           <p className="mb-2 text-sm text-white/90 drop-shadow">{project.description}</p>
@@ -53,7 +55,7 @@ function ProjectModal({ project, onClose }) {
             </div>
           ))}
         </div>
-        <div className="w-full max-h-64 mb-3 bg-bg rounded-2xl overflow-hidden transition-all duration-300 flex items-center justify-center aspect-[16/10]" style={{aspectRatio: '16/10'}}>
+        <div className="w-full max-h-64 mb-3 bg-bg rounded-2xl overflow-hidden transition-all duration-300 flex items-center justify-center aspect-[16/10]" style={{ aspectRatio: '16/10' }}>
           <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
         </div>
         <div className="flex gap-4 mt-2 w-full justify-center">
@@ -86,8 +88,8 @@ const Projects = () => {
         {projects.map((project, idx) => (
           <div
             key={project.name}
-            className={`relative flex flex-col justify-between items-start rounded-2xl shadow-xl cursor-pointer overflow-hidden group border border-gray-200 dark:border-gray-700 bg-gradient-to-br ${project.gradient} p-0`}
-            style={{ minHeight: 340 }}
+            className={`relative flex flex-col justify-between items-start rounded-2xl shadow-xl cursor-pointer overflow-hidden group border border-gray-200 dark:border-gray-700 p-0`}
+            style={project.gradientStyle}
             onClick={() => setSelected(project)}
           >
             <div className="flex flex-row gap-2 absolute top-3 right-3 z-20">
