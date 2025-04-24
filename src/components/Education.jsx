@@ -8,7 +8,7 @@ const educations = [
     degree: "BS Computer Science Major in Software Technology",
     school: "De La Salle Univeristy, Manila",
     date: "Sep 2022 - Present",
-    description: "Research Executive at Data Science Society. Doumentations member at SDFO Paragons. Member of Human-X Interactions Lab.",
+    description: "Research Executive at Data Science Society. Documentations member at SDFO Paragons. Member of Human-X Interactions Lab.",
   },
   {
     degree: "High School",
@@ -35,12 +35,12 @@ const Education = () => (
               iconStyle={{ background: "var(--violet)", color: "#fff", textAlign: "center" }}
               icon={<IoSchool size={24} />}
               key={i}
-              contentStyle={{ color: 'var(--text)', boxShadow: '0 4px 24px rgba(0,0,0,0.08)' }}
-              contentArrowStyle={{ borderRight: '7px solid var(--bg)' }}
+              contentStyle={{ background: 'var(--bg)', color: 'var(--text)', boxShadow: '0 4px 24px rgba(0,0,0,0.12)', border: '1px solid var(--violet)', borderRadius: '1rem', backdropFilter: 'blur(2px)' }}
+              contentArrowStyle={{ borderRight: '7px solid var(--violet)' }}
             >
-              <h3 className="vertical-timeline-element-title font-bold text-[color:var(--violet)]" style={{ textAlign: "left" }}>{education.degree}</h3>
+              <h3 className="vertical-timeline-element-title font-bold text-[color:var(--violet)] dark:text-[color:var(--text)]" style={{ textAlign: "left" }}>{education.degree}</h3>
               <h4 className="vertical-timeline-element-subtitle text-[color:var(--green)]" style={{ textAlign: "left" }}>{education.school}</h4>
-              <p className="text-[color:var(--violet)] text-base mt-2" style={{ textAlign: "left" }}>{education.description}</p>
+              <p className="text-[color:var(--violet)] dark:text-[color:var(--text)] text-base mt-2" style={{ textAlign: "left" }}>{education.description}</p>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
