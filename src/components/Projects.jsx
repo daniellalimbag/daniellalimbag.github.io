@@ -94,7 +94,7 @@ function ProjectModal({ project, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
       <div
-        className="p-6 rounded-xl shadow-2xl max-w-xl w-full relative animate-pop flex flex-col items-start transition-transform transition-opacity duration-300 ease-out transform scale-100 opacity-100"
+        className="p-3 sm:p-6 rounded-xl shadow-2xl max-w-xl w-full relative animate-pop flex flex-col items-start transition-transform transition-opacity duration-300 ease-out transform scale-100 opacity-100 mx-2 sm:mx-auto"
         style={{ ...project.gradientStyle, animation: 'modalPopIn 0.3s cubic-bezier(0.4,0,0.2,1)' }}
       >
         <button onClick={onClose} className="absolute top-4 right-4 text-3xl text-gray-200 hover:text-red-400 z-50 cursor-pointer" style={{ zIndex: 100 }}>&times;</button>
@@ -102,11 +102,11 @@ function ProjectModal({ project, onClose }) {
           <h3 className="text-2xl font-bold mb-2 text-white drop-shadow">{project.name}</h3>
           <p className="mb-2 text-sm text-white/90 drop-shadow">{project.description}</p>
         </div>
-        <div className="flex gap-5 items-center justify-center mb-6 w-full">
+        <div className="flex gap-3 sm:gap-5 items-center justify-center mb-6 w-full flex-wrap">
           {project.tech.map((tech) => (
-            <div key={tech.name} className="flex items-center gap-2 justify-center w-auto h-10 bg-[color:var(--bg)] rounded-lg shadow-md border border-gray-200 dark:border-gray-700 p-0.5 px-3">
-              {tech.icon}
-              <span className="text-text text-sm font-medium drop-shadow">{tech.name}</span>
+            <div key={tech.name} className="flex items-center gap-1 sm:gap-2 justify-center w-auto h-8 sm:h-10 bg-[color:var(--bg)] rounded-lg shadow-md border border-gray-200 dark:border-gray-700 p-0.5 px-2 sm:px-3">
+              {React.cloneElement(tech.icon, { className: 'w-4 h-4 sm:w-5 sm:h-5 ' + (tech.icon.props.className || '') })}
+              <span className="text-text text-xs sm:text-sm font-medium drop-shadow">{tech.name}</span>
             </div>
           ))}
         </div>
@@ -180,8 +180,8 @@ const Projects = () => {
           >
             <div className="flex flex-row gap-2 absolute top-3 right-3 z-20">
               {project.tech.map((tech) => (
-                <div key={tech.name} className="flex items-center justify-center w-7 h-7 bg-[color:var(--bg)] rounded-lg shadow-md border border-gray-200 dark:border-gray-700 p-0.5">
-                  {React.cloneElement(tech.icon, { className: 'w-4 h-4 ' + (tech.icon.props.className || '') })}
+                <div key={tech.name} className="flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 bg-[color:var(--bg)] rounded-lg shadow-md border border-gray-200 dark:border-gray-700 p-0.5">
+                  {React.cloneElement(tech.icon, { className: 'w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 ' + (tech.icon.props.className || '') })}
                 </div>
               ))}
             </div>
