@@ -88,8 +88,12 @@ const Projects = () => {
         {projects.map((project, idx) => (
           <div
             key={project.name}
-            className="relative rounded-xl overflow-hidden shadow-lg group bg-gradient-to-br from-[color:var(--bg)] to-[color:var(--blue)] border border-white/30"
+            className="relative rounded-xl overflow-hidden shadow-lg group bg-gradient-to-br from-[color:var(--bg)] to-[color:var(--blue)] border border-white/30 cursor-pointer"
             style={project.gradientStyle}
+            onClick={() => setSelected(project)}
+            tabIndex={0}
+            role="button"
+            onKeyPress={e => { if (e.key === 'Enter' || e.key === ' ') setSelected(project); }}
           >
             <div className="flex flex-row gap-2 absolute top-3 right-3 z-20">
               {project.tech.map((tech) => (
