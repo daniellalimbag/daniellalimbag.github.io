@@ -1,9 +1,39 @@
 import React, { useState } from "react";
 import { IoLogoElectron, IoLogoPython } from "react-icons/io5";
-import { SiSelenium, SiChakraui } from "react-icons/si";
-import { FaGithub, FaLink, FaReact } from "react-icons/fa";
+import { SiSelenium, SiChakraui, SiThreedotjs, SiJupyter, SiIeee } from "react-icons/si";
+import { FaGithub, FaLink, FaReact, FaPython, FaJava } from "react-icons/fa";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { BiLogoMongodb } from "react-icons/bi";
+import { DiSqllite } from "react-icons/di";
 
 const projects = [
+  {
+    name: "Calcademy",
+    image: "/projects/calcademy.png",
+    shortDescription: "Calculate your grades easily.",
+    description: "Calculate your grades easily. This is a customizable grade calculator that helps students track their academic performance. It features an adjustable grading scale, local storage, and a user-friendly interface.",
+    tech: [
+      { name: "React", icon: <FaReact className="w-6 h-6 text-sky-400" /> },
+      { name: "Chakra UI", icon: <SiChakraui className="w-6 h-6 text-teal-400" /> }
+    ],
+    gradientStyle: { background:'linear-gradient(to top, #c04848, #480048)'},
+    github: "https://github.com/daniellalimbag/calcademy",
+    demo: "https://calcademy.vercel.app/"
+  },
+  {
+    name: "Dishcord",
+    image: "/projects/dishcord.png",
+    shortDescription: "Share your dining experiences, explore hidden gems, and connect with fellow food lovers.",
+    description: "Share your dining experiences, explore hidden gems, and connect with fellow food lovers. Dishcord is a social food review platform where users can discover, rate, and discuss local restaurants.",
+    tech: [
+      { name: "Next.js", icon: <RiNextjsFill className="w-6 h-6 text-black dark:text-white" /> },
+      { name: "Tailwind CSS", icon: <RiTailwindCssFill className="w-6 h-6 text-sky-400" /> },
+      { name: "MongoDB", icon: <BiLogoMongodb className="w-6 h-6 text-green-600" /> }
+    ],
+    gradientStyle: {  background: 'linear-gradient(to top, #09203f 0%, #537895 100%)'},
+    github: "https://github.com/daniellalimbag/dishcord",
+    demo: "#"
+  },
   {
     name: "Snipey",
     image: "/projects/snipey.png",
@@ -19,19 +49,44 @@ const projects = [
     demo: "#"
   },
   {
-    name: "Calcademy",
-    image: "/projects/calcademy.png",
-    shortDescription: "Calculate your grades easily.",
-    description: "Calculate your grades easily. This is a customizable grade calculator that helps students track their academic performance. It features an adjustable grading scale, local storage, and a user-friendly interface.",
+    name: "EloMetrics",
+    image: "/projects/elometrics.png",
+    shortDescription: "A data modeling project that uses logistic regression to predict the outcomes of chess games based on Elo rating differences and move counts.",
+    description: "A data modeling project that uses logistic regression to predict the outcomes of chess games based on Elo rating differences and move counts. The model analyzes games from Lichess and developed with Jupyter Notebook. Published in the 2025 ICEIC, this study explores the limits of Elo-based prediction.",
+    tech: [
+      { name: "Python", icon: <FaPython className="w-6 h-6 text-yellow-500" /> },
+      { name: "Jupyter", icon: <SiJupyter className="w-6 h-6 text-orange-400" /> }
+    ],
+    gradientStyle: {  background: 'linear-gradient(to bottom, #434343 0%, black 100%)'},
+    paper: "https://ieeexplore.ieee.org/abstract/document/10879733"
+  },
+  {
+    name: "Portfolio",
+    image: "/projects/portfolio.png",
+    shortDescription: "Where I showcase my projects, skills, and experiences as a developer.",
+    description: "Where I showcase my projects, skills, and experiences as a developer.",
     tech: [
       { name: "React", icon: <FaReact className="w-6 h-6 text-sky-400" /> },
-      { name: "Chakra UI", icon: <SiChakraui className="w-6 h-6 text-teal-400" /> }
+      { name: "Tailwind CSS", icon: <RiTailwindCssFill className="w-6 h-6 text-sky-400" /> },
+      { name: "Three.js", icon: <SiThreedotjs className="w-6 h-6 text-yellow-500" /> }
     ],
-    gradientStyle: { background: 'linear-gradient(to top, #09203f 0%, #537895 100%)' },
-    github: "https://github.com/daniellalimbag/calcademy",
-    demo: "https://calcademy.vercel.app/"
+    gradientStyle: {  background: 'linear-gradient(-20deg, #3c2e68 0%, #8c8c9b 100%)'},
+    github: "https://github.com/daniellalimbag/daniellalimbag.github.io",
+    demo: "https://daniellalimbag.github.io"
   },
-  // add more projects later
+  {
+    name: "PokeBuild",
+    image: "/projects/pokebuild.png",
+    shortDescription: "Build your perfect Pokémon team.",
+    description: "Build your perfect Pokémon team. A mobile app developed with Android Studio that uses PokéAPI to helps trainers create and customize their ideal Pokémon teams. Leveraging the PokéAPI, users can browse detailed Pokémon stats, types, and abilities to build strategic lineups for battles or casual play.",
+    tech: [
+      { name: "Java", icon: <FaJava className="w-6 h-6 text-orange-700" /> },
+      { name: "SQLite", icon: <DiSqllite className="w-6 h-6 text-blue-800" /> }
+    ],
+    gradientStyle: { background: 'linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%)'},
+    github: "https://github.com/daniellalimbag/PokeBuild",
+    demo: "#"
+  },
 ];
 
 function ProjectModal({ project, onClose }) {
@@ -59,13 +114,21 @@ function ProjectModal({ project, onClose }) {
           <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
         </div>
         <div className="flex gap-4 mt-2 w-full justify-center">
-          <a href={project.github || "#"} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white/80 text-gray-900 rounded-lg font-semibold shadow hover:bg-white flex items-center gap-2 text-sm">
-            <FaGithub className="w-5 h-5" /> GitHub
-          </a>
-          {project.demo && project.demo !== "#" && project.demo.trim() !== "" && (
-            <a href={project.demo} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white/80 text-gray-900 rounded-lg font-semibold shadow hover:bg-white flex items-center gap-2 text-sm">
-              <FaLink className="w-5 h-5" /> Live Demo
+          {project.name === "EloMetrics" && project.paper ? (
+            <a href={project.paper} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white/80 text-gray-900 rounded-lg font-semibold shadow hover:bg-white flex items-center gap-2 text-sm">
+              <SiIeee className="w-5 h-5" /> Publication
             </a>
+          ) : (
+            <>
+              <a href={project.github || "#"} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white/80 text-gray-900 rounded-lg font-semibold shadow hover:bg-white flex items-center gap-2 text-sm">
+                <FaGithub className="w-5 h-5" /> GitHub
+              </a>
+              {project.demo && project.demo !== "#" && project.demo.trim() !== "" && (
+                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white/80 text-gray-900 rounded-lg font-semibold shadow hover:bg-white flex items-center gap-2 text-sm">
+                  <FaLink className="w-5 h-5" /> Live
+                </a>
+              )}
+            </>
           )}
         </div>
       </div>
