@@ -78,7 +78,7 @@ const projects = [
     name: "PokeBuild",
     image: "/projects/pokebuild.png",
     shortDescription: "Build your perfect Pokémon team.",
-    description: "Build your perfect Pokémon team. A mobile app developed with Android Studio that uses PokéAPI to helps trainers create and customize their ideal Pokémon teams. Leveraging the PokéAPI, users can browse detailed Pokémon stats, types, and abilities to build strategic lineups for battles or casual play.",
+    description: "Build your perfect Pokémon team. A mobile app developed with Android Studio that uses PokéAPI to helps trainers create and customize their ideal Pokémon teams.",
     tech: [
       { name: "Java", icon: <FaJava className="w-6 h-6 text-orange-700" /> },
       { name: "SQLite", icon: <DiSqllite className="w-6 h-6 text-blue-800" /> }
