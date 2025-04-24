@@ -6,8 +6,8 @@ import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 const ResponsiveLaptop = () => {
   const { size } = useThree();
   const scale = useMemo(() => {
-    if (size.width < 500) return 4;
-    if (size.width < 900) return 5;
+    if (size.width < 500) return 5;
+    if (size.width < 900) return 6;
     return 6;
   }, [size.width]);
   return <Model scale={scale} />;
