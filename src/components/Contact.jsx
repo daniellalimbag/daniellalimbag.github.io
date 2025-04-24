@@ -1,8 +1,11 @@
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 
 const Contact = () => (
-  <section className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center bg-[color:var(--bg)] px-4 md:px-16 xl:px-32 py-16" id="contact">
-    <div className="flex-1 flex flex-col justify-center items-start text-left text-[color:var(--text)] max-w-xl mb-12 md:mb-0">
+  <section
+    className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center bg-[color:var(--bg)] px-4 md:px-12 xl:px-25 py-16 relative z-10 border-t border-t-[color:var(--text)]"
+    id="contact"
+  >
+    <div className="flex-1 flex flex-col justify-center items-start text-left text-[color:var(--text)] max-w-xl mb-12 md:mb-0 relative z-10">
       <h3 className="text-lg font-semibold text-[color:var(--violet)] mb-2">Contact</h3>
       <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
         Let’s chat<br />
@@ -23,7 +26,7 @@ const Contact = () => (
         <a href="#" aria-label="LinkedIn" className="text-2xl text-[color:var(--text)] hover:text-[color:var(--violet)] transition"><FaLinkedin /></a>
       </div>
     </div>
-    <div className="flex-1 flex flex-col justify-center items-center">
+    <div className="flex-1 flex flex-col justify-center items-center relative z-10">
       <form className="w-full max-w-lg bg-gradient-to-br from-[color:var(--violet)]/80 to-[color:var(--blue)]/60 rounded-2xl shadow-xl p-8 flex flex-col gap-6">
         <input type="text" placeholder="Your name" className="w-full px-4 py-3 rounded-md bg-transparent border border-[color:var(--violet)] text-[color:var(--text)] placeholder-[color:var(--violet)] focus:outline-none focus:ring-2 focus:ring-[color:var(--violet)]" />
         <input type="email" placeholder="Your email" className="w-full px-4 py-3 rounded-md bg-transparent border border-[color:var(--violet)] text-[color:var(--text)] placeholder-[color:var(--violet)] focus:outline-none focus:ring-2 focus:ring-[color:var(--violet)]" />

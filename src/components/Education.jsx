@@ -19,7 +19,7 @@ const educations = [
 ];
 
 const Education = () => (
-  <section id="education" className="relative z-0 py-16 px-0 w-full bg-[color:var(--bg)] border-t-2" style={{ borderTopColor: 'var(--text)' }}>
+  <section id="education" className="relative z-0 py-16 px-0 w-full bg-[color:var(--bg)] border-t border-t-[color:var(--text)]">
     <div className="w-full">
       <div className="flex items-center justify-center mb-12 w-full">
         <h2 className="section-title text-3xl md:text-3xl font-bold text-text drop-shadow-lg tracking-tight text-center w-fit">
