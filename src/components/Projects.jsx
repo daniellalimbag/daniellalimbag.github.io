@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IoLogoElectron, IoLogoPython } from "react-icons/io5";
 import { SiSelenium, SiChakraui, SiThreedotjs, SiJupyter, SiIeee } from "react-icons/si";
 import { FaGithub, FaLink, FaReact, FaPython, FaJava } from "react-icons/fa";
@@ -144,14 +144,34 @@ function ProjectModal({ project, onClose }) {
 
 const Projects = () => {
   const [selected, setSelected] = useState(null);
+  const [animate, setAnimate] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimate(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="w-full py-16 bg-gradient-to-br from-[color:var(--bg)] to-[color:var(--green)] dark:bg-gradient-to-br dark:from-[color:var(--bg)] dark:to-[color:var(--blue)] flex flex-col items-center border-t border-t-[color:var(--text)] px-4 md:px-12 xl:px-25">
+    <section ref={sectionRef} className="w-full py-16 bg-gradient-to-br from-[color:var(--bg)] to-[color:var(--green)] dark:bg-gradient-to-br dark:from-[color:var(--bg)] dark:to-[color:var(--blue)] flex flex-col items-center border-t border-t-[color:var(--text)] px-4 md:px-12 xl:px-25">
       <h2 className="section-title text-3xl md:text-3xl font-bold text-text drop-shadow-lg tracking-tight text-center mb-10">Projects</h2>
+      <div className="mb-8"></div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl px-6">
         {projects.map((project, idx) => (
           <div
             key={project.name}
-            className="relative rounded-xl overflow-hidden shadow-lg group bg-gradient-to-br from-[color:var(--bg)] to-[color:var(--blue)] border border-white/30 cursor-pointer"
+            className={`relative rounded-xl overflow-hidden shadow-lg group bg-gradient-to-br from-[color:var(--bg)] to-[color:var(--blue)] border border-white/30 cursor-pointer transition-all duration-700 ${animate ? 'opacity-100 animate-slide-in' : 'opacity-0'} `}
             style={project.gradientStyle}
             onClick={() => setSelected(project)}
             tabIndex={0}
