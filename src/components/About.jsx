@@ -10,7 +10,7 @@ const About = () => (
         I’m Daniella Limbag, a passionate developer who loves learning new things and building digital solutions. I enjoy working with modern web technologies, learning new tools, and collaborating on exciting projects. Outside of coding, you might find me exploring indie games or watching YouTube tutorials and suddenly rethinking my entire tech stack.
       </p>
       <a
-        href="/CV_LIMBAG_DANIELLA.pdf"
+        href="/RESUME_LIMBAG_DANIELLA.pdf"
         download
         className="mt-3 sm:mt-4 [@media(min-width:3840px)]:mt-10 inline-block px-4 py-2 [@media(min-width:3840px)]:px-8 [@media(min-width:3840px)]:py-4 bg-[color:var(--violet)] hover:bg-[color:var(--green)] text-white font-semibold rounded-lg shadow-md transition-colors duration-200 text-sm sm:text-base [@media(min-width:3840px)]:text-2xl flex items-center gap-2"
       >
