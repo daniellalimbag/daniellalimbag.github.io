@@ -16,7 +16,7 @@ const projects = [
       { name: "React", icon: <FaReact className="w-6 h-6 text-sky-400" /> },
       { name: "Chakra UI", icon: <SiChakraui className="w-6 h-6 text-teal-400" /> }
     ],
-    gradientStyle: { background:'linear-gradient(to top, #c04848, #480048)'},
+    gradientStyle: { background:'linear-gradient(to bottom, #c04848, #480048)'},
     github: "https://github.com/daniellalimbag/calcademy",
     demo: "https://calcademy.vercel.app/"
   },
