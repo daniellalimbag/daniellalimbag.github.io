@@ -111,7 +111,7 @@ const Contact = () => {
             {loading ? 'Sending...' : 'Send Message'}
           </button>
           {status && (
-            <div className={`text-center text-xs sm:text-sm mt-2 ${status.startsWith('Thank') ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
+            <div className={`text-center text-xs sm:text-sm mt-2 ${status === 'Your message has been sent.' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
               {status}
             </div>
           )}
