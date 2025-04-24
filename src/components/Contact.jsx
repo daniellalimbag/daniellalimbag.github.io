@@ -66,9 +66,9 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex gap-6 mt-8">
-          <a href="#" aria-label="GitHub" className="text-2xl text-[color:var(--text)] hover:text-[color:var(--violet)] dark:hover:text-[color:var(--green)] transition"><FaGithub /></a>
-          <a href="#" aria-label="Facebook" className="text-2xl text-[color:var(--text)] hover:text-[color:var(--violet)] dark:hover:text-[color:var(--green)] transition"><FaFacebook /></a>
-          <a href="#" aria-label="LinkedIn" className="text-2xl text-[color:var(--text)] hover:text-[color:var(--violet)] dark:hover:text-[color:var(--green)] transition"><FaLinkedin /></a>
+          <a href={"https://github.com/daniellalimbag"} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-2xl text-[color:var(--text)] hover:text-[color:var(--violet)] dark:hover:text-[color:var(--green)] transition"><FaGithub /></a>
+          <a href="#https://www.facebook.com/daniella.limbag.9/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-2xl text-[color:var(--text)] hover:text-[color:var(--violet)] dark:hover:text-[color:var(--green)] transition"><FaFacebook /></a>
+          {/*<a href="#" aria-label="LinkedIn" className="text-2xl text-[color:var(--text)] hover:text-[color:var(--violet)] dark:hover:text-[color:var(--green)] transition"><FaLinkedin /></a>*/}
         </div>
       </div>
       <div className="w-auto flex flex-col justify-center items-center relative z-10 px-0">

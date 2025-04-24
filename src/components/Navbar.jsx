@@ -37,15 +37,15 @@ const Navbar = () => {
             <IoSunnyOutline className="w-6 h-6 text-[color:var(--text)]" />
           )}
         </button>
-        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-bg transition-colors">
+        <a href={"https://github.com/daniellalimbag"} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-bg transition-colors">
           <FaGithub className="w-5 h-5 md:w-6 md:h-6" />
         </a>
-        <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-bg transition-colors">
+        <a href={"https://www.facebook.com/daniella.limbag.9/"} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-bg transition-colors">
           <FaFacebook className="w-5 h-5 md:w-6 md:h-6" />
         </a>
-        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-bg transition-colors">
+        {/*<a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-bg transition-colors">
           <FaLinkedin className="w-5 h-5 md:w-6 md:h-6" />
-        </a>
+        </a>*/}
       </div>
     </nav>
   );
