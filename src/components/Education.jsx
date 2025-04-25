@@ -6,7 +6,7 @@ import { IoSchool } from "react-icons/io5";
 const educations = [
   {
     degree: "BS Computer Science Major in Software Technology",
-    school: "De La Salle Univeristy, Manila",
+    school: "De La Salle University, Manila",
     date: "Sep 2022 - Present",
     description: "Research Executive at Data Science Society. Documentations member at SDFO Paragons. Member of Human-X Interactions Lab.",
   },
