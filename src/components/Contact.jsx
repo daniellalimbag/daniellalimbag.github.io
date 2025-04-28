@@ -58,7 +58,7 @@ const Contact = () => {
         <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 w-full mb-4 sm:mb-5 md:mb-6 items-center sm:items-center lg:items-start text-center sm:text-center lg:text-left">
           <div className="flex items-center gap-1 sm:gap-2 md:gap-3 justify-center sm:justify-center lg:justify-start">
             <span className="text-lg sm:text-xl md:text-2xl text-[color:var(--violet)] dark:text-[color:var(--green)]"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none"><path d="M2 6.75C2 5.23122 3.23122 4 4.75 4H19.25C20.7688 4 22 5.23122 22 6.75V17.25C22 18.7688 20.7688 20 19.25 20H4.75C3.23122 20 2 18.7688 2 17.25V6.75Z" stroke="currentColor" strokeWidth="1.5"/><path d="M3.5 6.5L12 13.5L20.5 6.5" stroke="currentColor" strokeWidth="1.5"/></svg></span>
-            <span className="text-sm sm:text-base md:text-lg text-[color:var(--text)] select-all">limbagdaniella@gmail.com</span>
+            <a href="mailto:limbagdaniella@gmail.com" className="text-sm sm:text-base md:text-lg text-[color:var(--text)] select-all transition-colors duration-200 hover:text-[color:var(--green)]">limbagdaniella@gmail.com</a>
           </div>
           <div className="flex items-center gap-1 sm:gap-2 md:gap-3 justify-center sm:justify-center lg:justify-start">
             <span className="text-lg sm:text-xl md:text-2xl text-[color:var(--violet)] dark:text-[color:var(--green)]"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none"><path d="M12 2C7.031 2 3 6.031 3 11C3 15.969 12 22 12 22C12 22 21 15.969 21 11C21 6.031 16.969 2 12 2Z" stroke="currentColor" strokeWidth="1.5"/><circle cx="12" cy="11" r="3" stroke="currentColor" strokeWidth="1.5"/></svg></span>
