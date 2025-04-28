@@ -18,7 +18,7 @@ const About = () => (
         <IoIosDocument className="text-base sm:text-lg [@media(min-width:3840px)]:text-3xl" /> Resume
       </a>
     </div>
-    <div className="w-full lg:w-1/2 flex-1 flex flex-col items-center justify-center h-48 sm:h-56 md:h-64 lg:h-64 xl:h-72 2xl:h-80 [@media(min-width:3840px)]:h-[32rem] max-w-none pb-4 sm:pb-6 lg:pb-0 pt-6 sm:pt-8 lg:pt-8 mx-auto">
+    <div className="w-full lg:w-1/2 flex-1 flex flex-col items-center justify-center h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[28rem] 2xl:h-[36rem] [@media(min-width:3840px)]:h-[40rem] max-w-none pb-4 sm:pb-6 lg:pb-0 pt-8 sm:pt-10 lg:pt-12 mx-auto">
       <LaptopContainer />
     </div>
   </section>
