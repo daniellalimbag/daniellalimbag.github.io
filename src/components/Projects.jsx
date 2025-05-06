@@ -34,20 +34,20 @@ const projects = [
     github: "https://github.com/daniellalimbag/dishcord",
     demo: "#"
   },
-  // {
-  //   name: "Snipey",
-  //   image: "/projects/snipey.png",
-  //   shortDescription: "A web scraper app that checks for course availability.",
-  //   description: "A web scraper app that checks for course availability. Users receive real-time notifications through a connected Discord bot.",
-  //   tech: [
-  //     { name: "Electron", icon: <IoLogoElectron className="w-6 h-6 text-blue-400" /> },
-  //     { name: "Python", icon: <IoLogoPython className="w-6 h-6 text-yellow-500" /> },
-  //     { name: "Selenium", icon: <SiSelenium className="w-6 h-6 text-green-500" /> }
-  //   ],
-  //   gradientStyle: { background: 'linear-gradient(to top, #0ba360 0%, #3cba92 100%)' },
-  //   github: "https://github.com/daniellalimbag/snipey",
-  //   demo: "#"
-  // },
+  {
+  name: "Snipey",
+  image: "/projects/snipey.png",
+  shortDescription: "A web scraper app that checks for course availability.",
+  description: "A web scraper app that checks for course availability. Users receive real-time notifications through a connected Discord bot.",
+  tech: [
+     { name: "Electron", icon: <IoLogoElectron className="w-6 h-6 text-blue-400" /> },
+     { name: "Python", icon: <IoLogoPython className="w-6 h-6 text-yellow-500" /> },
+     { name: "Selenium", icon: <SiSelenium className="w-6 h-6 text-green-500" /> }
+   ],
+   gradientStyle: { background: 'linear-gradient(to top, #0ba360 0%, #3cba92 100%)' },
+   github: "https://github.com/daniellalimbag/snipey",
+   demo: "#"
+ },
   {
     name: "EloMetrics",
     image: "/projects/elometrics.png",
