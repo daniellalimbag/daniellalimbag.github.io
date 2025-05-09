@@ -1,4 +1,4 @@
-# Portfolio Project
+# Portfolio
 
 This is my personal portfolio website built to showcase my projects and skills.
 
