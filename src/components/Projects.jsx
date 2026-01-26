@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import { IoLogoElectron, IoLogoPython } from "react-icons/io5";
-import { SiSelenium, SiChakraui, SiThreedotjs, SiJupyter, SiIeee } from "react-icons/si";
-import { FaGithub, FaLink, FaReact, FaPython, FaJava } from "react-icons/fa";
+import { IoLogoElectron, IoLogoPython, IoLogoAndroid } from "react-icons/io5";
+import { SiSelenium, SiChakraui, SiThreedotjs, SiJupyter, SiIeee, SiKotlin} from "react-icons/si";
+import { FaGithub, FaLink, FaReact, FaPython, FaJava, FaAndroid} from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoMongodb } from "react-icons/bi";
 import { DiSqllite } from "react-icons/di";
@@ -74,6 +74,7 @@ const projects = [
     github: "https://github.com/daniellalimbag/daniellalimbag.github.io",
     demo: "https://daniellalimbag.github.io"
   },
+  /*
   {
     name: "PokeBuild",
     image: "/projects/pokebuild.png",
@@ -85,6 +86,18 @@ const projects = [
     ],
     gradientStyle: { background: 'linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%)'},
     github: "https://github.com/daniellalimbag/PokeBuild",
+    demo: "#"
+  },*/
+  {
+    name: "DORY",
+    image: "/projects/dory.png",
+    shortDescription: "A user-centered system for swimming activity analytics and coaching.",
+    description: "Developed as an undergraduate thesis, DORY (Data Oriented Reporting for Your Swim) is a user-centered analytics system designed to bridge the gap between coaches and swimmers. By utilizing signal processing techniques on smartwatch sensor data, the app automates the collection of deep performance metrics such as stroke count and swimming velocity.",    tech: [
+      { name: "Kotlin", icon: <SiKotlin className="w-6 h-6 text-purple-600" /> },
+      { name: "Android SDK", icon: <IoLogoAndroid className="w-6 h-6 text-green-600" /> },
+    ],
+    gradientStyle: { background: 'linear-gradient(-225deg, #54b6ca 0%, #348756 100%)'},
+    github: "https://github.com/daniellalimbag/dory-app",
     demo: "#"
   },
 ];
