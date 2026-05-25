@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
-const SERVICE_ID = 'service_cdv2mj2';
+const SERVICE_ID = 'service_zxc48wt';
 const TEMPLATE_ID = 'template_mqy6lpo';
 const PUBLIC_KEY = 'eXuIzVZfg7JkJxmxp';
 const Contact = () => {
