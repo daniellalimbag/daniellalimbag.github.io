@@ -20,9 +20,15 @@ const educations = [
 
 const experiences = [
   {
+    title: "AI Engineering Intern",
+    company: "JWay Group, Inc.",
+    date: "Jul 2026 - Present",
+    description: "Developing skills in AI agent prototyping, dashboard development, and presenting automation solutions.",
+  },
+  {
     title: "DBA Intern",
     company: "Chubb Asia Pacific PTE. LTD.",
-    date: "Apr 2026 - Present",
+    date: "Apr 2026 - Jun 2026",
     description: "Developed an RAG chatbot for database documentation to improve information retrieval.",
   },
   {
