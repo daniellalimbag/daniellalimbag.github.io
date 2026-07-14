@@ -66,9 +66,8 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex gap-3 sm:gap-4 md:gap-6 mt-2 sm:mt-4 md:mt-8 justify-center sm:justify-center lg:justify-start w-full">
-          <a href={"https://github.com/daniellalimbag"} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-xl sm:text-2xl md:text-3xl text-[color:var(--text)] hover:text-[color:var(--violet)] dark:hover:text-[color:var(--green)] transition"><FaGithub /></a>
-          <a href="#https://www.facebook.com/daniella.limbag.9/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-xl sm:text-2xl md:text-3xl text-[color:var(--text)] hover:text-[color:var(--violet)] dark:hover:text-[color:var(--green)] transition"><FaFacebook /></a>
-          {/*<a href="#" aria-label="LinkedIn" className="text-xl sm:text-2xl md:text-3xl text-[color:var(--text)] hover:text-[color:var(--violet)] dark:hover:text-[color:var(--green)] transition"><FaLinkedin /></a>*/}
+          <a href="https://github.com/daniellalimbag" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-xl sm:text-2xl md:text-3xl text-[color:var(--text)] hover:text-[color:var(--violet)] dark:hover:text-[color:var(--green)] transition"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/daniella-limbag/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-xl sm:text-2xl md:text-3xl text-[color:var(--text)] hover:text-[color:var(--violet)] dark:hover:text-[color:var(--green)] transition"><FaLinkedin /></a>
         </div>
       </div>
       <div className="w-full md:w-auto flex flex-col justify-center items-center relative z-10 px-3 sm:px-0 mt-2 sm:mt-4 md:mt-8">

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
 
-// i need to replace these later
-const GITHUB_URL = "https://github.com/yourusername";
-const FACEBOOK_URL = "https://facebook.com/yourusername";
-const LINKEDIN_URL = "https://linkedin.com/in/yourusername";
+const GITHUB_URL = "https://github.com/daniellalimbag";
+const FACEBOOK_URL = "https://www.facebook.com/daniella.limbag.9/";
+// Paste your LinkedIn profile URL here
+const LINKEDIN_URL = "https://www.linkedin.com/in/yourusername";
 
 const Navbar = () => {
   const [dark, setDark] = useState(() =>
@@ -37,15 +37,12 @@ const Navbar = () => {
             <IoSunnyOutline className="w-6 h-6 text-[color:var(--text)]" />
           )}
         </button>
-        <a href={"https://github.com/daniellalimbag"} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-bg transition-colors">
+        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-bg transition-colors">
           <FaGithub className="w-5 h-5 md:w-6 md:h-6" />
         </a>
-        <a href={"https://www.facebook.com/daniella.limbag.9/"} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-bg transition-colors">
-          <FaFacebook className="w-5 h-5 md:w-6 md:h-6" />
-        </a>
-        {/*<a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-bg transition-colors">
+        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-bg transition-colors">
           <FaLinkedin className="w-5 h-5 md:w-6 md:h-6" />
-        </a>*/}
+        </a>
       </div>
     </nav>
   );

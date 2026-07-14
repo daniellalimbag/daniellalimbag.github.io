@@ -27,7 +27,7 @@ const Hero = () => (
             words={[
               "software development",
               "ui/ux design",
-              "data science",
+              "ai engineering",
               "building digital solutions"
             ]}
           />

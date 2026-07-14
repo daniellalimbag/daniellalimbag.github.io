@@ -8,13 +8,18 @@ const educations = [
     degree: "BS Computer Science Major in Software Technology",
     school: "De La Salle University, Manila",
     date: "Sep 2022 - Present",
-    description: "Research Executive at Data Science Society. Documentations member at SDFO Paragons. Member of Human-X Interactions Lab.",
+    description: "Research Executive at Data Science Society. Documentations member at SDFO Paragons. Researcher at Human-X Interactions Lab.",
   },
   {
-    degree: "High School",
+    degree: "Junior & Senior High School",
     school: "The Nazareth School, Lipa City",
-    date: "Aug 2017 - May 2022",
+    date: "Aug 2016 - May 2022",
     description: "Graduated in STEM. Competed in math and chess competitions.",
+  },
+  {
+    degree: "Primary School",
+    school: "Woodland Primary School, Singapore",
+    date: "Jan 2009 - Dec 2014",
   },
 ];
 
