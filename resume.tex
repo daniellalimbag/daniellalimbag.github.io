@@ -1,0 +1,337 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=1.1 cm,
+    bottom=1.1 cm,
+    left=1.3 cm,
+    right=1.3 cm,
+    footskip=0.4 cm,
+    % showframe % for debugging
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Daniella_Limbag_Resume},
+    pdfauthor={Daniella Franxene P. Limbag},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{\needspace{3\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{0.5pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.18 cm
+}{
+    % bottom space:
+    0.10 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.04 cm,
+        parsep=0.04 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.04 cm,
+        parsep=0.04 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.2}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{20 pt}{20 pt}\selectfont Daniella Franxene P. Limbag
+
+        \vspace{2 pt}
+
+        \normalsize
+        \mbox{Philippines}%
+        \kern 4.0 pt%
+        \AND%
+        \kern 4.0 pt%
+        \mbox{\hrefWithoutArrow{mailto:limbagdaniella@gmail.com}{limbagdaniella@gmail.com}}%
+        \kern 4.0 pt%
+        \AND%
+        \kern 4.0 pt%
+        \mbox{\hrefWithoutArrow{tel:+63-995-445-9103}{0995 445 9103}}%
+        \kern 4.0 pt%
+        \AND%
+        \kern 4.0 pt%
+        \mbox{\href{https://daniellalimbag.github.io/}{Portfolio}}%
+        \kern 4.0 pt%
+        \AND%
+        \kern 4.0 pt%
+        \mbox{\href{https://www.linkedin.com/in/daniella-limbag/}{LinkedIn}}%
+        \kern 4.0 pt%
+        \AND%
+        \kern 4.0 pt%
+        \mbox{\href{https://github.com/daniellalimbag}{GitHub}}%
+    \end{header}
+
+    \vspace{2 pt}
+
+    \section{Education}
+        \begin{twocolentry}{
+            Sept 2022 – Oct 2026
+        }
+            \textbf{De La Salle University}, BS in Computer Science major in Software Technology\end{twocolentry}
+
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Coursework:} Software Engineering, Database Systems, Machine Learning, Mobile Development, HCI
+            \end{highlights}
+        \end{onecolentry}
+
+\section{Experience}
+\begin{twocolentry}{
+    Jul 2026 -- Present
+}
+    \textbf{JWay Group Inc.}, AI Engineering Intern
+\end{twocolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Training in AI-powered workflow automation and business process optimization.
+        \item Developing skills in AI agent prototyping, dashboard development, and presenting automation solutions.
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.08 cm}
+\begin{twocolentry}{
+    Apr 2026 -- Jun 2026
+}
+    \textbf{Chubb}, DBA Intern
+\end{twocolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developed a RAG-powered AI assistant POC for the Global DBA team using Python, MongoDB, and VoyageAI.
+        \item Assisted in iterative testing, technical documentation, and interface development.
+        \item Gained exposure to database administration through shadowing senior DBAs at tasks and meetings.
+    \end{highlights}
+\end{onecolentry}
+
+\section{Extracurricular Activities}
+
+\begin{twocolentry}{
+    Oct 2024 -- May 2025
+}
+    \textbf{Data Science Society}, Research Executive
+\end{twocolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Collaborated with fellow members in research-related initiatives and discussions.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.08 cm}
+
+\begin{twocolentry}{
+    Feb 2024 -- May 2026
+}
+    \textbf{SDFO Paragons}, Documentation Member
+\end{twocolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Assisted in preparing post-activity reports and organizational records.
+    \end{highlights}
+\end{onecolentry}
+
+    \section{Projects}
+        \begin{twocolentry}{
+            \href{https://github.com/daniellalimbag/dory-app}{GitHub}
+        }
+            \textbf{DORY: Swimming Analytics System}\end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+            \item Led development of a WearOS-based swimming analytics system.
+            \item Processed and visualized swimming performance metrics to present performance trends for coaches \& athletes.
+            \item \textbf{Tools:} Python, Kotlin, Android Studio, WearOS, Supabase
+            \end{highlights}
+        \end{onecolentry}
+        \vspace{0.08 cm}
+        \begin{twocolentry}{
+            \href{https://github.com/daniellalimbag/PaperXent}{GitHub}
+        }
+        \textbf{PaperXent: Paper Trading Platform}\end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+            \item Built a full-stack paper trading app with market discovery, server-priced trades, and portfolio analytics.
+            \item Implemented post-trade AI analysis with portfolio metrics.
+            \item Tools Used: React, Next.js, Node.js, TypeScript, PostgreSQL, Prisma, Gemini, Tailwind CSS
+            \end{highlights}
+        \end{onecolentry}
+        \vspace{0.08 cm}
+
+        \begin{twocolentry}{
+            \href{https://github.com/daniellalimbag/practi}{GitHub}
+        }
+        \textbf{Practi: Internship AI Assistant}\end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+            \item Built a RAG chatbot that answers internship-related questions from practicum course documents.
+            \item Implemented date-aware semantic retrieval and multi-format document ingestion.
+            \item Tools Used: Python, Next.js, Tailwind CSS, FastAPI, LangChain, Groq, ChromaDB, sentence-transformers
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Publications}
+        \begin{samepage}
+            \begin{twocolentry}{
+                Jan 2025
+            }
+                \textbf{EloMetrics: Advanced Outcome Prediction for Chess Matches with Elo Ratings and Logistic Regression}
+            \end{twocolentry}
+
+            \vspace{0.05 cm}
+
+            \begin{onecolentry}
+                \mbox{Ma. Julianna Reyes}, {Eirnan Dicreto}, {Emmanuel Santos}, \mbox{\textbf{\textit{Daniella Limbag}}}, \mbox{Gabriel Avelino}
+
+                \vspace{0.05 cm}
+
+        \href{https://doi.org/10.1109/ICEIC64972.2025.10879733}{10.1109/ICEIC64972.2025.10879733}
+        \end{onecolentry}
+        \end{samepage}
+
+    \section{Skills}
+        \begin{onecolentry}
+        \setlength{\tabcolsep}{0pt}
+        \begin{tabularx}{\textwidth}{@{}X@{\hspace{0.4cm}}X@{}}
+            \textbf{Languages:} Python, Java, C/C++, Kotlin, SQL, JavaScript, TypeScript, HTML/CSS &
+            \textbf{Frameworks \& Libraries:} React, Next.js, Node.js, FastAPI, Tailwind CSS, LangChain, Scikit-learn, Pandas \\[0.12cm]
+            \textbf{Tools \& Platforms:} Git, AWS, Android Studio, Jupyter Notebook, Prisma, Figma, Selenium, VoyageAI &
+            \textbf{Databases:} PostgreSQL, MongoDB, SQLite, Supabase, ChromaDB \\[0.12cm]
+            \textbf{Soft Skills:} Communication, Leadership, Team Collaboration, Critical Thinking, Adaptability & \\
+        \end{tabularx}
+        \end{onecolentry}
+\end{document}
